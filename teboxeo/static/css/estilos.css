@@ -1,0 +1,59 @@
+
+
+footer{
+    height: auto;
+    background:linear-gradient(to bottom,rgb(68, 60, 60),rgb(35, 34, 34),rgb(0, 0, 0));
+
+}
+.span-footer{
+    color: rgb(255, 132, 0);
+    font-size: bold;
+}
+
+.mapa{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.img-tienda{
+    border-radius: 2rem;
+}
+
+.logo{
+    width: 4rem;
+}
+
+body{
+    background: rgb(255,255,255);
+background: linear-gradient(10deg, rgba(255,255,255,1) 0%, rgba(144,145,145,1) 44%, rgba(255,255,255,0.9192051820728291) 85%);
+}
+
+form{
+    border: 1px solid gray;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: .6rem .6rem 1rem gray ;
+    
+}
+
+.producto{
+    border-radius: 2rem;
+    box-shadow: .6rem .6rem 1rem gray ;
+}
+
+
+/* --------------------------------------------ESTILOS INTERSECTION---------------------------------------------*/
+
+
+.estilo-intersection{
+    opacity: 0;
+    transform: scale(0.5);
+    
+}
+
+.visible{
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1);
+}
+
