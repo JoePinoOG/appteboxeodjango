@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" href="./img/logo.png">
 </head>
+<!-- "./img/" -->
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
@@ -72,7 +74,7 @@
           <div class="mt-5 card-deck d-flex justify-content-around flex-wrap">
            
             <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection1">
-              <img class="card-img-top" src="./img/guantes-box-adidas.png" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/guantes-box.jpg '%}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Guantes de boxeo Adidas</h5>
                 <p class="card-text ">Los guantes de boxeo Adidas azules son una opción popular para los boxeadores y entusiastas del fitness que buscan calidad, estilo.....</p>
@@ -83,7 +85,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection2">
-              <img class="card-img-top" src="./img/saco-boxeo.webp" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/saco-boxeo.webp' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Saco de boxeo</h5>
                 <p class="card-text">
@@ -95,7 +97,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection3">
-              <img class="card-img-top" src="./img/cuerda-box.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/cuerda-box.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Cuerda entrenamiento</h5>
                 <p class="card-text">¡Potencia tu entrenamiento con nuestra cuerda de boxeo de alta calidad!
@@ -109,7 +111,7 @@
     
     
             <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection4">
-              <img class="card-img-top" src="./img/chaleco-box.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/chaleco-box.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Chaleco de entrenamiento</h5>
                 <p class="card-text">
@@ -121,7 +123,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection5">
-              <img class="card-img-top" src="./img/short-boxeo.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/short-boxeo.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Short Everlast</h5>
                 <p class="card-text">Los shorts de boxeo Everlast en azul son la combinación perfecta de estilo, comodidad y funcionalidad para cualquier boxeador o entusiasta del ....</p>
@@ -132,7 +134,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection6">
-              <img class="card-img-top" src="./img/zapatillas-boxeo2.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/zapatillas-boxeo2.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title text-center">Zapatillas Leone</h5>
                 <p class="card-text">Las zapatillas de boxeo Leone son la elección perfecta para cualquier boxeador serio que busque comodidad, soporte y rendimiento inigualables....</p>
@@ -146,7 +148,7 @@
 <!--actualizar-->
         
             <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection7">
-              <img class="card-img-top" src="./img/cadenas-saco.webp" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/cadenas-saco.webp' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Cadenas para saco de boxeo</h5>
                 <p class="card-text">Nuestra cadena para saco de boxeo es la solución perfecta para colgar y asegurar tu saco de boxeo de manera segura y confiable....</p>
@@ -157,7 +159,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection8">
-              <img class="card-img-top" src="./img/guantes-box.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/guantes-box.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Guantes de boxeo genéricos</h5>
                 <p class="card-text">Nuestros guantes de boxeo genéricos son la elección perfecta para aquellos que buscan un equipo confiable y asequible para mejorar....</p>
@@ -168,7 +170,7 @@
               </div>
             </div>
             <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection9">
-              <img class="card-img-top" src="./img/guantes-entrenamiento.jpg" alt="Card image cap">
+              <img class="card-img-top" src="{%static './img/guantes-entrenamiento.jpg' %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Guantes de entrenamiento</h5>
                 <p class="card-text">Nuestros guantes de entrenamiento de boxeo son el equipo esencial que necesitas para mejorar tu técnica, velocidad y fuerza en el gimnasio .....</p>
@@ -178,7 +180,7 @@
                 <button class="btn btn-primary boton-producto">Agregar</button>
               </div>
             </div><div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection10">
-          <img class="card-img-top" src="./img//pera-boxeo.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/pera-boxeo.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Pera de boxeo elástica</h5>
             <p class="card-text">Nuestra pera de boxeo elástica es el equipo perfecto para desarrollar tus habilidades de golpeo, mejorar tu velocidad y coordinación, y aumentar tu .....</p>
@@ -189,7 +191,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection11">
-          <img class="card-img-top" src="./img/vendas-box.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/vendas-box.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Vendas</h5>
             <p class="card-text">Nuestras vendas para entrenamiento son el complemento esencial para cualquier boxeador serio que busque protección, estabilidad y comodidad durante....</p>
@@ -200,7 +202,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection12">
-          <img class="card-img-top" src="./img/zapatillas-boxeo.webp" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/zapatillas-boxeo.webp' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Zapatillas de boxeo Everlast</h5>
             <p class="card-text">Las zapatillas de boxeo Everlast son el equipo esencial para cualquier boxeador o entusiasta del fitness que busca comodidad, apoyo y rendimiento durante.....</p>
@@ -211,7 +213,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection13">
-          <img class="card-img-top" src="./img//soporte-saco.webp" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/soporte-saco.webp' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Soporte metálico</h5>
             <p class="card-text">Nuestro soporte metálico para saco de boxeo es la solución perfecta para colgar tu saco de forma segura y conveniente en tu gimnasio en casa o en cualquier lugar.....</p>
@@ -222,7 +224,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx- producto estilo-intersection" id="intersection14">
-          <img class="card-img-top" src="./img//casco-box.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/casco-box.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Casco de entrenamiento</h5>
             <p class="card-text">Nuestro casco de boxeo de entrenamiento es la elección perfecta para cualquier boxeador que busque comodidad, seguridad y rendimiento durante.....</p>
@@ -233,7 +235,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection15">
-          <img class="card-img-top" src="./img/pesas-tobillo.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{%static './img/pesas-tobillo.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Pesas de tobillo 6kg</h5>
             <p class="card-text">Nuestras pesas de tobillo son el complemento perfecto para tus rutinas de ejercicio, ayudándote a fortalecer y tonificar tus piernas y glúteos de manera ....</p>
@@ -270,7 +272,7 @@
 
 
 
-      <script src="app.js"></script>
+      <script src="{% static 'app.js'%}"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
