@@ -1,13 +1,13 @@
 {% extends "plantillabase.html" %} 
- 
+{% load static %}
 {% block body %}
-  <!--  --------------------------------            -->
+  <!--           -->
       <main class="">
       
-       <h1 class="text-center mt-5 mb-5">Nuestros servicios</h1>
+        <h1 class="text-center mt-5 mb-5">Nuestros servicios</h1>
         <p class="text-center p-5">En esta sección, nos enorgullece ofrecer una amplia gama de servicios diseñados para satisfacer las necesidades específicas de cada individuo, ya sea que estés buscando mejorar tu técnica, aumentar tu resistencia o prepararte para una pelea importante. Nuestros entrenadores altamente calificados están aquí para brindarte una atención personalizada y ayudarte a alcanzar tus metas de manera efectiva y segura. Ya sea que estés interesado en sesiones individuales, clases grupales o programas de entrenamiento a medida, tenemos la experiencia y los recursos para ayudarte a maximizar tu potencial como boxeador.</p>
-       <div class="card card col-12  ">
-        <img src="./img/entrenamiento-personalizado.avif" class="card-img-top" alt="...">
+        <div class="card card col-12  ">
+        <img src="{% static 'img/entrenamiento-personalizado.avif' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Unete a nuestros entrenamientos personalizados.</h5>
           <p class="card-text">En nuestra sección de servicios de entrenamientos personalizados de boxeo, te ofrecemos la oportunidad de recibir atención individualizada y planes de entrenamiento adaptados a tus necesidades y objetivos específicos. Ya sea que estés buscando perfeccionar tu técnica, aumentar tu resistencia o prepararte para una competición, nuestros entrenadores expertos en boxeo están aquí para ayudarte a alcanzar tus metas de manera efectiva y segura.</p>
@@ -22,7 +22,7 @@
         </div>
         <div class="card card mt-5 col-12 mb-5 ">
           <div class="card card col-12  ">
-          <img src="./img/gym.jpg" class="card-img-top " alt="...">
+          <img src="{% static 'img/gym.jpg' %}" class="card-img-top " alt="...">
           <div class="card-body">
           <h5 class="card-title text-primary ">Unete a nuestros entrenamientos grupales.</h5>
             <p class="card-text">En nuestra sección de servicios de entrenamientos grupales de boxeo, te ofrecemos una experiencia de entrenamiento única y emocionante que te ayudará a alcanzar tus objetivos de fitness mientras te diviertes y te desafías a ti mismo. Nuestros entrenamientos grupales están diseñados para personas de todos los niveles de habilidad, desde principiantes hasta boxeadores experimentados, y se llevan a cabo en un ambiente motivador y de apoyo. </p>

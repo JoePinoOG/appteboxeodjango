@@ -1,17 +1,18 @@
  {% extends "plantillabase.html" %} 
+ {% load static %}
  {% block body %}
-      <!--  --------------------------------            -->
+      <!--             -->
 
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./img/carrusel1.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel1.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./img/carrusel2.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel2.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./img/carrusel3.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel3.jpg' %}" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -29,10 +30,10 @@
         <h2 class="text-center">Nuestra tienda</h2>
         <div class="d-flex flex justify-content-around align-items-center flex-wrap">
             <p class="col-10 col-lg-5 mt-5">¡Bienvenidos a nuestra tienda de boxeo, el lugar donde los amantes del noble arte encuentran todo lo que necesitan para entrenar, competir y vivir su pasión por el boxeo al máximo!
-
+              
               En nuestro establecimiento, nos enorgullece ofrecer una amplia gama de productos y servicios diseñados específicamente para satisfacer las necesidades de boxeadores de todos los niveles, desde principiantes hasta profesionales. Desde guantes y vendajes hasta sacos de boxeo y equipamiento de entrenamiento de última generación, tenemos todo lo que necesitas para mejorar tu técnica, fortalecer tu cuerpo y alcanzar tus metas dentro del ring.
              </p>
-            <img class="col-10 mt-5 col-lg-5 w-30 img-tienda producto" src="./img/tienda.jpg" alt="imagen">
+             <img class="col-10 mt-5 col-lg-5 w-30 img-tienda producto" src="{% static 'img/tienda.jpg' %}" alt="imagen">
         </div>
         
       </div>
@@ -44,7 +45,7 @@
 
       <div class="mt-5 card-deck d-flex justify-content-around flex-wrap">
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection1">
-          <img class="card-img-top" src="./img/guantes-box-adidas.png" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/guantes-box-adidas.png' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Guantes de boxeo Adidas</h5>
             <p class="card-text ">Los guantes de boxeo Adidas azules son una opción popular para los boxeadores y entusiastas del fitness que buscan calidad, estilo.....</p>
@@ -55,7 +56,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection2">
-          <img class="card-img-top" src="./img/saco-boxeo.webp" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/saco-boxeo.webp' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Saco de boxeo</h5>
             <p class="card-text">
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection3">
-          <img class="card-img-top" src="./img/cuerda-box.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/cuerda-box.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Cuerda entrenamiento</h5>
             <p class="card-text">¡Potencia tu entrenamiento con nuestra cuerda de boxeo de alta calidad!
@@ -81,7 +82,7 @@
 
 
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection4">
-          <img class="card-img-top" src="./img/chaleco-box.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/chaleco-box.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Chaleco de entrenamiento</h5>
             <p class="card-text">
@@ -93,7 +94,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection5">
-          <img class="card-img-top" src="./img/short-boxeo.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/short-boxeo.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Short Everlast</h5>
             <p class="card-text">Los shorts de boxeo Everlast en azul son la combinación perfecta de estilo, comodidad y funcionalidad para cualquier boxeador o entusiasta del ....</p>
@@ -104,7 +105,7 @@
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection6">
-          <img class="card-img-top" src="./img/zapatillas-boxeo2.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{% static 'img/zapatillas-boxeo2.jpg' %}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title text-center">Zapatillas Leone</h5>
             <p class="card-text">Las zapatillas de boxeo Leone son la elección perfecta para cualquier boxeador serio que busque comodidad, soporte y rendimiento inigualables....</p>
@@ -129,7 +130,7 @@
 
       <div class=" card-deck d-flex justify-content-center flex-wrap">
         <div class="card card col-12 col-md-6  mb-5 ">
-          <img src='{% static "img/gym.jpg"% }' class="card-img-top" alt="...">
+          <img src="{% static 'img/gym.jpg' %}" class="card-img-top" alt="...">
           <div class="card-body">
               <h5 class="card-title text-primary ">Unete a nuestros entrenamientos grupales.</h5>
               <p class="card-text">En nuestra sección de servicios de entrenamientos grupales de boxeo, te ofrecemos una experiencia de entrenamiento única y emocionante que te ayudará a alcanzar tus objetivos de fitness mientras te diviertes y te desafías a ti mismo. Nuestros entrenamientos..... </p>
@@ -139,7 +140,7 @@
             </div>
         </div>
         <div class="card card col-12 col-md-6 mb-5 ">
-          <img src="./img/entrenamiento-personalizado.avif" class="card-img-top" alt="...">
+          <img src="{% static 'img/entrenamiento-personalizado.avif' %}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title text-primary">Unete a nuestros entrenamientos personalizados.</h5>
             <p class="card-text">En nuestra sección de servicios de entrenamientos personalizados de boxeo, te ofrecemos la oportunidad de recibir atención individualizada y planes de entrenamiento adaptados a tus necesidades y objetivos específicos. Ya sea que estés buscando.....</p>
