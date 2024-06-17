@@ -14,7 +14,10 @@ def login(request):
 ##    return render(request,"productos.html")
 
 def productos(request):
+    ##return render(request,"productos.html")
     productos = Producto.objects.all()
+    context = {"productos": productos}
+    return render(request,"productos.html",context)
 
 def servicios(request):
     return render(request,"servicios.html")
