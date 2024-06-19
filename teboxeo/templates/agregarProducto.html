@@ -1,0 +1,43 @@
+{% extends "plantillabaseAdmin.html" %} 
+ 
+{% block body %}
+
+
+
+      
+      <main class="mb-5">
+        <div>
+          <h1 class="text-center mt-5">Agregar un nuevo producto</h1>
+          <p class="text-center mt-3">En esta sección podrás agregar un nuevo producto a tu inventario</p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <form action="">
+
+            <label for="" class="d-block">Nombre del producto</label>
+            <input type="text" class="d-block w-100" placeholder="Ingresa el nombre del producto" >
+
+            <label for="" class="d-block">Descripcion</label>
+            <input type="text" class="d-block w-100" placeholder="Ingresa una descripcion del producto">
+
+            <label for="" class="d-block">Precio</label>
+            <input type="number" class="d-block " min="0">
+
+            <label for="" class="d-block">Stock</label>
+            <input type="number" class="d-block" min="0">
+
+            <label for="" class="d-block">Inserta una imagen</label>
+            <input type="file" class="d-block">
+          </form>
+
+        </div>
+
+        </main>
+
+
+
+
+
+
+
+{% endblock %}

@@ -21,3 +21,15 @@ def productos(request):
 
 def servicios(request):
     return render(request,"servicios.html")
+
+
+def administrador(request):
+    productos = Producto.objects.all()
+    context = {"productos": productos}
+    return render(request,"administrador.html",context)
+
+def agregarProducto(request):
+    return render(request,"agregarProducto.html")
+
+def clientes(request):
+    return render(request,"clientes.html")
