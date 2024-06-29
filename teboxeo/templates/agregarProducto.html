@@ -7,27 +7,36 @@
       
       <main class="mb-5">
         <div>
+          <div id="idMensaje" class="text-center fw-bold py-2 px-5 text-white bg-success w-100">
+            {% if mensaje %}
+              {{mensaje}}
+            {% endif %}
+          </div>
           <h1 class="text-center mt-5">Agregar un nuevo producto</h1>
           <p class="text-center mt-3">En esta sección podrás agregar un nuevo producto a tu inventario</p>
         </div>
 
         <div class="d-flex justify-content-center">
-          <form action="">
-
+          <form action="{% url 'agregarProducto' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <label for="" class="d-block">Nombre del producto</label>
-            <input type="text" class="d-block w-100" placeholder="Ingresa el nombre del producto" >
+            <input type="text" id="nombre" class="d-block w-100" name="nombre" placeholder="Ingresa el nombre del producto" >
 
             <label for="" class="d-block">Descripcion</label>
-            <input type="text" class="d-block w-100" placeholder="Ingresa una descripcion del producto">
+            <input type="text" id="descripcion" class="d-block w-100" name="descripcion" placeholder="Ingresa una descripcion del producto">
 
             <label for="" class="d-block">Precio</label>
-            <input type="number" class="d-block " min="0">
+            <input type="number" name="precio" class="d-block " min="0">
 
             <label for="" class="d-block">Stock</label>
-            <input type="number" class="d-block" min="0">
+            <input type="number" id="stock" name="stock" class="d-block" min="0">
 
             <label for="" class="d-block">Inserta una imagen</label>
-            <input type="file" class="d-block">
+            <input type="file" id="imagen" name="imagen" class="d-block">
+          
+            <div class="d-flex justify-content-center mt-4">
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
           </form>
 
         </div>

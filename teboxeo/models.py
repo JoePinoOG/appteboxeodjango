@@ -13,5 +13,5 @@ class Producto(models.Model):
     descripcion = models.TextField()
     precio = models.IntegerField()
     stock = models.IntegerField()
-    imagen = models.FileField(upload_to='./teboxeo/static/img')
+    imagen = models.ImageField(upload_to='./teboxeo/static/img')
 

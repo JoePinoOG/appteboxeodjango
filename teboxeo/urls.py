@@ -11,5 +11,6 @@ urlpatterns = [
     
     path('administrador/',views.administrador, name= 'administrador'),
     path('agregarProducto/',views.agregarProducto, name = 'agregarProducto'),
-    path('clientes/',views.clientes, name= 'clientes')
+    path('clientes/',views.clientes, name= 'clientes'),
+    path('eliminarProducto/<str:pk>',views.eliminarProducto, name='eliminarProducto')
 ]

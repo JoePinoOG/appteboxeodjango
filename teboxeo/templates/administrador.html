@@ -2,10 +2,13 @@
  
 {% block body %}
 
-
-
       <main>
         <div>
+          <div id="idMensaje" class="text-center fw-bold py-2 px-5 text-white bg-success w-100">
+            {% if mensaje %}
+              {{mensaje}}
+            {% endif %}
+          </div>
             <h1 class="text-center mt-5">Inventario de productos</h1>
             <p class="text-center mt-3">En esta sección podrás ver el inventario de tu tienda y administrar tus productos</p>
         </div>
@@ -13,7 +16,7 @@
         <div class="d-flex justify-content-center mt-3">
             <button class="btn btn-primary"><a class="nav-link text-white" href="{% url 'agregarProducto' %}">Agregar nuevo producto</a></button>
         </div>
-          
+         
         <div>
           <div class="mt-5 card-deck d-flex justify-content-around flex-wrap">
 
@@ -21,7 +24,7 @@
       {% for producto in productos %}
 
       <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto" id="">
-        <img class="card-img-top" src=`{{producto.imagen}}` alt="Card image cap">
+        <img class="card-img-top" src={{producto.imagen}} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title text-center">{{producto.nombre}}</h5>
           <p class="card-text">{{producto.descripcion}}</p>
@@ -29,8 +32,8 @@
         <h4 class="text-success text-center">${{producto.precio}}</h4>
         <div class="card-footer d-flex justify-content-around">
             
-            <button class="btn btn-warning boton-producto">Editar</button>
-            <button class="btn btn-danger boton-producto">Eliminar</button>
+            <button class="btn btn-warning boton-producto"><a class="nav-link text-white" >Editar</a></button>
+            <button class="btn btn-danger boton-producto"><a class="nav-link text-white" href="{% url 'eliminarProducto' pk=producto.nombre %}">Eliminar</a></button>
         </div>
       </div>
     {% endfor%}
@@ -43,3 +46,6 @@
 
     
 {% endblock %}
+
+<!-- 
+href="{% url 'editarProducto' pk=producto.nombre %}" -->

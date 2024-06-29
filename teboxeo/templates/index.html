@@ -44,77 +44,20 @@
 
 
       <div class="mt-5 card-deck d-flex justify-content-around flex-wrap">
-        <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection1">
-          <img class="card-img-top" src="{% static 'img/guantes-box-adidas.png' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Guantes de boxeo Adidas</h5>
-            <p class="card-text ">Los guantes de boxeo Adidas azules son una opción popular para los boxeadores y entusiastas del fitness que buscan calidad, estilo.....</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$29.990</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-        </div>
-        <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection2">
-          <img class="card-img-top" src="{% static 'img/saco-boxeo.webp' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Saco de boxeo</h5>
-            <p class="card-text">
-              El saco de boxeo Everlast en color rojo es una opción popular entre los boxeadores y aficionados al fitness debido a su durabilidad, rendimiento y ....</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$89.990</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-        </div>
-        <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection3">
-          <img class="card-img-top" src="{% static 'img/cuerda-box.jpg' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Cuerda entrenamiento</h5>
-            <p class="card-text">¡Potencia tu entrenamiento con nuestra cuerda de boxeo de alta calidad!
-              La cuerda de boxeo es la herramienta perfecta....</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$12.990</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-        </div>
+        {% for producto in productos %}
 
-
-        <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection4">
-          <img class="card-img-top" src="{% static 'img/chaleco-box.jpg' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Chaleco de entrenamiento</h5>
-            <p class="card-text">
-              El chaleco de boxeo es una pieza esencial de equipo diseñada para brindarte comodidad, protección y rendimiento durante tus sesiones de entrenamiento.... </p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$39.990</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-        </div>
-        <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection5">
-          <img class="card-img-top" src="{% static 'img/short-boxeo.jpg' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Short Everlast</h5>
-            <p class="card-text">Los shorts de boxeo Everlast en azul son la combinación perfecta de estilo, comodidad y funcionalidad para cualquier boxeador o entusiasta del ....</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$25.490</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-        </div>
-        <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection6">
-          <img class="card-img-top" src="{% static 'img/zapatillas-boxeo2.jpg' %}" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Zapatillas Leone</h5>
-            <p class="card-text">Las zapatillas de boxeo Leone son la elección perfecta para cualquier boxeador serio que busque comodidad, soporte y rendimiento inigualables....</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <h4 class="text-success">$119.990</h4>
-            <button class="btn btn-primary boton-producto">Agregar</button>
-          </div>
-      </div>
+              <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto" id="">
+                <img class="card-img-top" src={{producto.imagen}} alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{producto.nombre}}</h5>
+                  <p class="card-text">{{producto.descripcion}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <h4 class="text-success">${{producto.precio}}</h4>
+                    <button class="btn btn-primary boton-producto">Agregar</button>
+                </div>
+              </div>
+            {% endfor%}
       </div>
       <div class="d-flex justify-content-center mt-5">
         <button class="btn btn-primary"><a class="text-white text-decoration-none mt-5 " href="productos/">Ver más productos</a></button>
