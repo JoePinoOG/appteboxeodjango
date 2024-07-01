@@ -1,0 +1,51 @@
+{% extends "plantillabaseAdmin.html" %} 
+ 
+{% block body %}
+
+      <main class="mb-5">
+        <div>
+          <div id="idMensaje" class="text-center fw-bold py-2 px-5 text-white bg-success w-100">
+            {% if mensaje %}
+              {{mensaje}}
+            {% endif %}
+          </div>
+          <h1 class="text-center mt-5">Modificar producto</h1>
+          <p class="text-center mt-3">En esta sección podrás modificar un producto de tu inventario</p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <form action="{% url 'modificarProducto' nombre_producto=producto.nombre %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="nombre" class="d-block">Nombre del producto</label>
+            <input type="text" id="nombre" class="d-block w-100" name="nombre" value="{{ producto.nombre }}" placeholder="Ingresa el nombre del producto" >
+
+            <label for="descripcion" class="d-block">Descripcion</label>
+            <input type="text" id="descripcion" class="d-block w-100" name="descripcion" value="{{ producto.descripcion }}" placeholder="Ingresa una descripcion del producto">
+
+            <label for="precio" class="d-block">Precio</label>
+            <input type="number" id="precio" name="precio" class="d-block " value="{{ producto.precio }}" min="0">
+
+            <label for="stock" class="d-block">Stock</label>
+            <input type="number" id="stock" name="stock" class="d-block" value="{{ producto.stock }}" min="0">
+
+            <label for="imagen" class="d-block">Inserta una imagen</label>
+            <input type="file" id="imagen" name="imagen" class="d-block">
+            {% if producto.imagen %}
+              <img src="{{ producto.imagen.url }}" alt="Imagen del producto" class="img-fluid mt-2" style="max-width: 100px;">
+            {% endif %}
+          
+            <div class="d-flex justify-content-center mt-4">
+              <button type="submit" class="btn btn-primary">Modificar</button>
+            </div>
+          </form>
+
+        </div>
+
+        </main>
+
+
+
+
+
+
+{% endblock %}

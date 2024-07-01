@@ -32,7 +32,7 @@
         <h4 class="text-success text-center">${{producto.precio}}</h4>
         <div class="card-footer d-flex justify-content-around">
             
-            <button class="btn btn-warning boton-producto"><a class="nav-link text-white" >Editar</a></button>
+            <button class="btn btn-warning boton-producto"><a class="nav-link text-white" href="{% url 'modificarProducto' nombre_producto=producto.nombre %}" >Editar</a></button>
             <button class="btn btn-danger boton-producto"><a class="nav-link text-white" href="{% url 'eliminarProducto' pk=producto.nombre %}">Eliminar</a></button>
         </div>
       </div>

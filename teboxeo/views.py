@@ -1,5 +1,6 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import Producto
+from django.core.exceptions import ValidationError
 # Create your views here.
 
 def index(request):
@@ -113,3 +114,38 @@ def eliminarProducto(request,pk):
 
 def clientes(request):
     return render(request,"clientes.html")
+
+
+
+def modificarProducto(request, nombre_producto):
+    try:
+        producto = Producto.objects.get(nombre=nombre_producto)
+        if request.method == 'POST':
+            nombre = request.POST.get('nombre', producto.nombre)
+            descripcion = request.POST.get('descripcion', producto.descripcion)
+            precio = request.POST.get('precio', producto.precio)
+            stock = request.POST.get('stock', producto.stock)
+            imagen = request.FILES.get('imagen', None) 
+
+            producto.nombre = nombre
+            producto.descripcion = descripcion
+            producto.precio = precio
+            producto.stock = stock
+            if imagen: 
+                producto.imagen = imagen
+            producto.save()
+
+            mensaje = "Producto Modificado Exitosamente"
+            context = {'mensaje': mensaje, 'producto': producto}
+            return render(request, 'modificarProducto.html', context)
+        else:
+            context = {'producto': producto}
+            return render(request, 'modificarProducto.html', context)
+    except Producto.DoesNotExist:
+        mensaje = "Producto no encontrado"
+        context = {'mensaje': mensaje}
+        return render(request, 'modificarProducto.html', context)
+    except Exception as e:
+        mensaje = f"Error al modificar el producto: {str(e)}"
+        context = {'mensaje': mensaje}
+        return render(request, 'modificarProducto.html', context)
